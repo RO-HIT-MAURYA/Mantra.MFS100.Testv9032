@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MFS100Test">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:paddingTop="0dp">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            style="@style/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/app_title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+                    <ImageView
+                        android:id="@+id/imgFinger"
+                        android:layout_width="140dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="3.5"
+                        android:background="@drawable/imagefinger"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/finger" />
+
+                    <CheckBox
+                        android:id="@+id/cbFastDetection"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.5"
+                        android:text="Fast Finger "
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnInit"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="@string/Init" />
+
+                    <Button
+                        android:id="@+id/btnUninit"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="@string/UnInit" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+                    <Button
+                        android:id="@+id/btnSyncCapture"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="@string/SyncCapture" />
+
+                    <Button
+                        android:id="@+id/btnStopCapture"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="@string/StopSyncCapture" />
+
+                    <Button
+                        android:id="@+id/btnMatchISOTemplate"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="@string/MatchISO" />
+
+                    <Button
+                        android:id="@+id/btnExtractISOImage"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="EXTRACT ISO" />
+
+
+                    <Button
+                        android:id="@+id/btnExtractAnsi"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+                        android:text="EXTRACT ANSI" />
+
+                    <Button
+                        android:id="@+id/btnExtractWSQImage"
+                        style="@style/buttonbig"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/button"
+                        android:onClick="onControlClicked"
+
+                        android:text="EXTRACT WSQ" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblMessage"
+                style="@style/message"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/message"
+                android:gravity="center"
+
+                android:padding="5dp"
+                android:text=""
+                android:layout_margin="5dp"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/txtEventLog"
+                style="@style/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70"
+                android:background="@drawable/message"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btnClearLog"
+                style="@style/buttonfull"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:onClick="onControlClicked"
+                android:text="@string/ClearLog" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

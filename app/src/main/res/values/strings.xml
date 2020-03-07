@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">V9032 Mantra.MFS100.Test</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">MANTRA-MFS100-TEST</string>
+    <string name="Init">INIT</string>
+    <string name="UnInit">UNINIT</string>
+    <string name="ExtractISO">ISO(FMR)</string>
+    <string name="ExtractWSQ">WSQ</string>
+    <string name="MatchISO">MATCH ISO</string>
+    <string name="MatchMinutiaeISO">MATCH Minutiae ISO</string>
+    <string name="foorLoop">Init/Uninit</string>
+    <string name="ClearLog">CLEAR LOG</string>
+    <string name="SyncCapture">CAPTURE</string>
+    <string name="StopSyncCapture">STOP CAP</string>
+    <string name="WriteBit">Write Bit</string>
+    <string name="ReadBit">Read Bit</string>
+    <string name="ChangeKey">Change Key</string>
+    <string name="GetKey">Get Key</string>
+
+    <string-array name="MFS100Ver">
+        <item>41</item>
+        <item>31</item>
+    </string-array>
+
+    <string name="title_activity_preference">Preference</string>
+</resources>
